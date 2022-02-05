@@ -1,10 +1,11 @@
+""" Programa para Calcular coeficientes momentos negativos en losas de dos direcciones
+ACI-319-2014 para losa caso 2 (Continuidad en todos los lados) """
+
 # Elaborado por JLU
-# Programa para Calcular coeficientes momentos negativos en losas de dos direcciones
-# ACI-319-2014 para losa caso 2 (Continuidad en todos los lados)
 
 import numpy as np
 
-# TODO
+# To do
 # Que el usuario solo introduzca la longitud de ambos lados sin importar el orden
 # Introducir los argumentos desde la linea de comandos
 # Usar polinomio de grado dos en vez de interpolacion lineal
