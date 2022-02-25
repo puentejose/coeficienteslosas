@@ -7,10 +7,10 @@ ACI-319-2014 """
 import numpy as np
 
 # To do
+# Introducir casos restantes (CHECK)
 # Que el usuario solo introduzca la longitud de ambos lados sin importar el orden (CHECK)
 # Introducir los argumentos desde la linea de comandos
 # Usar polinomio de grado dos en vez de interpolacion lineal
-# Introducir casos restantes
 
 relacion = [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95, 1]
 lados = []
@@ -73,3 +73,21 @@ else:
                   0.044, 0.051, 0.057, 0.062, 0.067, 0.071]
             y = np.interp(m, relacion, cb)
             print(f"Cb es {y:.5f}")
+        case 8:
+            # Continuidad en ambos lados cortos y un lado largo
+            ca = [0.089, 0.085, 0.080, 0.074, 0.068,
+                  0.061, 0.055, 0.049, 0.043, 0.038, 0.033]
+            cb = [0.01, 0.014, 0.018, 0.024, 0.029,
+                  0.036, 0.041, 0.046, 0.052, 0.056, 0.061]
+            y = np.interp(m, relacion, ca)
+            y2 = np.interp(m, relacion, cb)
+            print(f"Ca es {y:.5f} y Cb es {y2:.5f}")
+        case 9:
+            # Continuidad en ambos lados largos y un lado corto
+            ca = [0.088, 0.086, 0.085, 0.083, 0.081,
+                  0.078, 0.075, 0.072, 0.068, 0.065, 0.061]
+            cb = [0.003, 0.005, 0.006, 0.008, 0.011,
+                  0.014, 0.017, 0.021, 0.025, 0.029, 0.033]
+            y = np.interp(m, relacion, ca)
+            y2 = np.interp(m, relacion, cb)
+            print(f"Ca es {y:.5f} y Cb es {y2:.5f}")
